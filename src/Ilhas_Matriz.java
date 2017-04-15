@@ -7,8 +7,6 @@ public class Ilhas_Matriz {
 		vetorFinal = vetor.reader();
 		
 		while(true){
-			System.out.println("X "+x+" Y "+y);
-			
 			if(y >= vetor.altura()-1 && x >= vetor.largura()){
 				break;
 			}
@@ -32,8 +30,7 @@ public class Ilhas_Matriz {
 	
 	    public static void numeroIlhas(int[][] val, int xAtual, int yAtual){
 			int novoY = 0, novoX = 0;
-			boolean novaIlha = true;
-			System.out.println(numIlhas);
+			
 			if(xAtual+1 < vetor.largura() && val[xAtual+1][yAtual] == 1){
 				novoX = xAtual+1;
 				numeroIlhas(val, novoX, yAtual);
