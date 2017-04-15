@@ -1,18 +1,17 @@
 public class Ilhas_Matriz {
 	static int x, y, f, g, resp, cont, indX, indY;
 	static readerVector vetor = new readerVector();
-	static int[][] teste;
+	static int[][] vetorFinal;
 	
 	public static void main(String[] args) {
-		teste = vetor.reader();
-		writer(teste);
+		vetorFinal = vetor.reader();
+		writer(vetorFinal);
 	}	
 
-	public static void writer(int[][] vetor) {
-		 for (int i = 0; i < vetor.length; i++) {
-			for (int j = 0; j < vetor.length; j++) {
-				System.out.print("|");
-				System.out.print(vetor[i][j] + "|");				
+	public static void writer(int[][] val) {
+		 for (int i = 0; i < vetor.largura(); i++) {
+			for (int j = 0; j < vetor.altura(); j++) {
+				System.out.print(val[j][i]);
 			}
 			System.out.print("\n");
 		}

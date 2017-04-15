@@ -14,24 +14,33 @@ public class readerVector {
 			vetor = new int[x][y];			
 			padrao = file.nextLine();
 			while (file.hasNext()) {
-				for (int i = 0; i < x; i++) {
+				for (int i = 0; i < y; i++) {
 					padrao = file.nextLine(); // recebe a linha como string					
 					f = 0;
 					g = 1;
-					for (int j = 0; j < y; j++) {
+					for (int j = 0; j < x; j++) {
 						int valor = Integer.parseInt(padrao.substring(f, g));
-						vetor[j][i] = valor;						
+						vetor[j][i] = valor;	
 						f++;
 						g++;
 					}
 				}
 			}
-			file.close();			
+			
+			file.close();	
 		} catch (Exception e) {
 			e.printStackTrace();
 			return null;
 		}
 		return vetor;
+	}
+	
+	public int largura(){
+		return y;
+	}
+	
+	public int altura(){
+		return x;
 	}
 
 }
