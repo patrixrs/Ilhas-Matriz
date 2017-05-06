@@ -8,7 +8,7 @@ public class readerVector {
 
 	public int[][] reader() {
 		try {
-			Scanner file = new Scanner(new File("src/Arquivos/example_3.txt"));
+			Scanner file = new Scanner(new File("src/Arquivos/example_4.txt"));
 			x = file.nextInt(); // recebem os primeiros parametros inteiros
 			y = file.nextInt();
 			vetor = new int[x][y];

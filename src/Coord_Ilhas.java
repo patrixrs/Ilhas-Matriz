@@ -1,11 +1,14 @@
-public class Ilhas_Matriz {
+
+public class Coord_Ilhas {
+	
 	static readerVector vetor = new readerVector();
 	static int[][] vetorFinal;
 	static int numIlhas = 0, x = 0, y = 0;
 	static Pilha pilha = new Pilha();
 	static String entrada;
-
+	
 	public static void main(String[] args) {
+		
 		vetorFinal = vetor.reader();
 
 		while (true) {
@@ -34,8 +37,8 @@ public class Ilhas_Matriz {
 		}
 		writer(vetorFinal);
 
-	}// close main
-
+	}//fecha main
+	
 	public static void numeroIlhas(int[][] val, int xAtual, int yAtual) {
 		int novoY = 0, novoX = 0;
 		
@@ -77,9 +80,10 @@ public class Ilhas_Matriz {
 			pilha.append(""+numIlhas);
 		}
 	}// fecha teste de numero de ilhas
-
+	
 	public static void writer(int[][] val) {
-		System.out.println("O numero de ilhas é: " + numIlhas + "\n");
+		System.out.println("Legenda: \nX = Largura, Y = Altura \nX-Y");
+		pilha.printPilha();
 	}// close function Writer
 
-}// close class
+}//fecha class
