@@ -79,7 +79,7 @@ public class Ilhas_Matriz {
 	}// fecha teste de numero de ilhas
 
 	public static void writer(int[][] val) {
-		System.out.println("O numero de ilhas é: " + numIlhas + "\n");
+		System.out.println(numIlhas); // escreve o numero de ilhas
 	}// close function Writer
 
 }// close class
